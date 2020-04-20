@@ -18,7 +18,7 @@ var tdImc = paciente.querySelector(".info-imc");
 var imc = peso / (altura * altura);
 
 if(altura > 3.00 || altura < 0){
-    console.log("Altura invalida";)
+    console.log("Altura invalida")
     AlturaValida = false;
 }
 
@@ -47,6 +47,7 @@ var tdImcTres = pacienteTres.querySelector(".info-imc");
 var imcTres = pesoTres / (alturaTres * alturaTres);
 
 tdImcTres.textContent = imcTres;
+
 
 var pacienteTres = document.querySelector("#terceiro");
 
