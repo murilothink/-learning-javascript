@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha("<br><br>");
+		
+	}
+
+	function pulaLinha(linha) {
+
+		document.write(linha);	
+	}
+
+	var valorLinha = parseInt(prompt("Entre com o numero de linha"));
+	var valorColuna = parseInt(prompt("Entre com o numero de coluna"));
+
+
+
+	for (var linha = 1; linha <= valorLinha; linha++){
+
+		for (var coluna = 1; coluna <= valorColuna; coluna++){
+
+			document.write("MENE ");
+
+		}
+
+		mostra(" ");
+
+	}
+
+</script>

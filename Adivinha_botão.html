@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+
+
+
+<input/>
+<button>Compare com meu segredo </button>
+
+<script>
+
+
+	var tentativas = 4;
+
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha("<br><br>");
+		
+	}
+
+	function pulaLinha(linha) {
+
+		document.write(linha);	
+	}
+
+	var segredo = [5, 7, 10, 2];
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica(){
+
+		for(var i = 0; i < tentativas; i++){
+
+			if (input.value == segredo[i]){
+
+				alert("Você acertou!");
+			
+
+			} else {
+
+				alert("Você errou o numero era ");
+	
+			}
+
+		}
+
+		
+		input.value = "";
+		input.focus();
+
+	}
+	
+
+	var button = document.querySelector("button");
+
+
+	button.onclick = verifica;
+
+	mostra("<br><br>" + "Tentativas");
+
+
+	</script>
