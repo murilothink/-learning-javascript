@@ -46,8 +46,6 @@ for(var i = 0; i < pacientes.length; i++){
         tdImc.textContent = ("Invalido")
     }
     
-    
-    
 }
 
 
