@@ -1,4 +1,3 @@
-
 var titulo = document.querySelector(".titulo");
 titulo.textContent = "Aparecida Norte";
 
@@ -22,29 +21,36 @@ for(var i = 0; i < pacientes.length; i++){
     var PesoValido = true;
     var AlturaValida = true;
 
+
+
     if(altura > 3.00 || altura < 0){
         console.log("Altura invalida");
         AlturaValida = false;
         var altura = paciente.querySelector(".info-altura");
         altura.textContent = ("Alura Invalida");
         paciente.classList.add("paciente-invalido");
-        
+            
     }
-
+    
     if(peso < 0 || peso > 1000){
         console.log("Peso invalida");
         PesoValido = false;
         var peso = paciente.querySelector(".info-peso");
         peso.textContent = ("Peso Invalido");  
     }
+    
 
-    if(PesoValido && AlturaValida){
-        console.log(imc)
-        AlturaValida = true;
-        tdImc.textContent = imc.toFixed(2);
-    }else{
-        tdImc.textContent = ("Invalido")
-    }
+    function aprovadoCalc(X,Y){
+        if(PesoValido && AlturaValida){
+            console.log(imc)
+            AlturaValida = true;
+            tdImc.textContent = imc.toFixed(2);
+        }else{
+            tdImc.textContent = ("Invalido")
+        }
+    } 
+
+    aprovadoCalc(AlturaValida,PesoValido);
     
 }
 
