@@ -1,4 +1,3 @@
-
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
 botaoAdicionar.addEventListener("click", function(event){
@@ -19,7 +18,6 @@ botaoAdicionar.addEventListener("click", function(event){
     var gorduratd = document.createElement("td");
     var imctd = document.createElement("td");
 
-
     nometd.textContent = nome;
     pesotd.textContent = peso;
     alturatd.textContent = altura;
@@ -33,9 +31,27 @@ botaoAdicionar.addEventListener("click", function(event){
     pacienteTr.appendChild(gorduratd);
     pacienteTr.appendChild(imctd);
 
+
     var tabela = document.querySelector("#tabela-pacientes");
 
-    tabela.appendChild(pacienteTr);
+    var PesoValido = true;
+    var AlturaValida = true;
 
+    if(peso < 0 || peso > 1000){
+      console.log("Peso invalida");
+      PesoValido = false;
+      alert(peso.textContent = ("Peso Invalido"));  
+    }
+
+    if(altura > 3.00 || altura < 0){
+      console.log("Altura invalida");
+      AlturaValida = false;
+      alert(altura.textContent = ("Alura Invalida"));
+    }
+    if(PesoValido && AlturaValida){
+      console.log(imc)
+      AlturaValida = true;
+      tabela.appendChild(pacienteTr);
+    }
 
   });
