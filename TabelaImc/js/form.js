@@ -40,7 +40,7 @@ botaoAdicionar.addEventListener("click", function(event){
     if(peso < 0 || peso > 1000){
       console.log("Peso invalida");
       PesoValido = false;
-      alert(peso.textContent = ("Peso Invalido"));  
+      alert(peso.textContent = ("Peso Invalido"));    
     }
 
     if(altura > 3.00 || altura < 0){
